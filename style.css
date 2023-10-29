@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    padding:86px;
+    background-image: url('y1.jpg'); /* Replace 'background.jpg' with your image file name and extension */
+    /* background-repeat: no-repeat;  */
+    /* background-attachment: fixed; */
+    
+}
+@keyframes shine {
+    0% {
+        box-shadow: 0 0 10px rgba(0,0,255,0.7);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(0,0,255,0.9);
+    }
+}
+
+button.shine {
+    animation: shine 0.5s;
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+#audio-controls {
+    display: none; /* Hide default controls */
+}
+
+.custom-controls {
+    /* Style your custom controls here */
+}
+
+.calculator {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 200px; /* Adjust the width as needed */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center; /* Center the buttons */
+    background-color: #105a93;
+    .calculator {
+        /* ... existing styles ... */
+        user-select: none; /* Disable user selection */
+    }
+    
+}
+
+.calculator input {
+    width: 100%;
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+
+.calculator button {
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    margin: 5px; /* Add margin to all sides */
+    cursor: pointer;
+}
+
+.calculator button:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-image: url('y3.jpg');
+    }
+    20% {
+        background-image: url('y2.jpg');
+    }
+    40% {
+        background-image: url('y1.jpg');
+    }
+    60% {
+        background-image: url('y4.jpg');
+    }
+    80% {
+        background-image: url('y2.jpg');
+    }
+    100% {
+        background-image: url('y1.jpg');
+    }
+}
+
+body {
+    animation: backgroundAnimation 20s infinite alternate;
+}
+
+
